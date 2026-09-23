@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neuralyzer"
+version = "0.1.0"
+description = "Make your AI agent forget the secrets it saw. Finds and redacts API keys in Claude Code / Codex transcripts."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Sandeep Sirodia" }]
+requires-python = ">=3.9"
+keywords = ["claude-code", "codex", "secrets", "security", "ai-agents", "redaction"]
+classifiers = ["Programming Language :: Python :: 3", "Topic :: Security", "Environment :: Console"]
+
+[project.urls]
+Homepage = "https://github.com/sandeepsirodia/neuralyzer"
+
+[project.scripts]
+neuralyzer = "neuralyzer:main"
+
+[tool.setuptools]
+py-modules = ["neuralyzer"]
