@@ -117,6 +117,16 @@ Every promise below is a test in [`tests/`](tests/):
 
 People have been asking Anthropic for this: [#50014](https://github.com/anthropics/claude-code/issues/50014), [#58043](https://github.com/anthropics/claude-code/issues/58043), [#95680](https://github.com/anthropics/claude-code/issues/95680). Until it's built in, there's this: one Python file, zero dependencies, readable in ten minutes.
 
+## Prior art, and what's new here
+
+**[TruffleHog](https://github.com/trufflesecurity/trufflehog)** and **[gitleaks](https://github.com/gitleaks/gitleaks)** are excellent secret scanners, with far more detectors than neuralyzer. You can point them at `~/.claude` today, and you should if you already use them.
+
+What neuralyzer adds is everything *after* detection, specific to agent transcripts:
+- **redaction in place that keeps every JSONL line valid**, so `--resume` still works
+- **a SessionEnd hook**, so it happens automatically
+- **a rotation checklist** grouped by provider
+- **zero dependencies**
+
 <details>
 <summary><b>Development</b></summary>
 
