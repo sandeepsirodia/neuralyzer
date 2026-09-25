@@ -69,7 +69,7 @@ Your transcript still works, and `claude --resume` still works. The key is just 
 ## Try it (10 seconds, read-only)
 
 ```bash
-uvx --from git+https://github.com/sandeepsirodia/neuralyzer neuralyzer scan
+uvx neuralyzer scan
 ```
 
 Nothing is changed. Nothing leaves your machine. You'll just *see*.
@@ -77,7 +77,7 @@ Nothing is changed. Nothing leaves your machine. You'll just *see*.
 ## Keep it
 
 ```bash
-uv tool install git+https://github.com/sandeepsirodia/neuralyzer   # or: pipx install git+https://…
+uv tool install neuralyzer   # or: pipx install neuralyzer
 neuralyzer install-hook                                            # scrub every session when it ends
 ```
 
